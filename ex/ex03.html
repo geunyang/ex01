@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식실습</title>
+    <style>
+        table {
+            width: 600px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 20px 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>회원가입정보</caption>
+        <form action="ex03.html" autocomplete="off" method="post" enctype="multipart/form-data">
+            <tr>
+                <th>아이디</th>
+                <td><div><input type="text" name="id"></div></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><div><input type="password" name="password"></div></td>
+            </tr>
+            <tr>
+                <th>비밀번호확인</th>
+                <td><div><input type="password" name="password"></div></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td><div><input type="text" name="name"></div></td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td><div><label><input type="radio" name="gender" value="남">남</label>
+                <label><input type="radio" name="gender" value="여">여</label></div></td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td><div><select name="location">
+                    <option value="no01">02</option>
+                    <option value="no02">062</option>
+                    <option value="no03">031</option>
+                    </select><input type="text" name="phone"><input type="text" name="phone"></div>
+                </td>
+            </tr>
+            <tr>
+                <th>SMS수신여부</th>
+                <td>
+                    <div><label><input type="checkbox" name="sms" value="수신허용">수신허용</label></div>
+                </td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <div><input type="text" name="email">@
+                        <select name="address">
+                        <option value="no04">직접입력</option>
+                        <option value="no05">naver.com</option>
+                        <option value="no06">gmail.com</option>
+                        </select></div>
+                </td>
+            </tr>
+            <tr>
+                <th>사진등록</th>
+                <td><div><input type="file" name="filename"></div></td>
+            </tr>
+            <tr>
+                <th colspan="2"><div><input type="submit" value="회원가입"></div></th>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
