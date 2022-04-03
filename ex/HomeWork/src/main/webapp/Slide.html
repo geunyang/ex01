@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slide</title>
+<style>
+img { width: 300px; height: 200px; }
+ul { list-style: none; margin: 0; padding:0; }
+ul li { float: left; margin: 20px; }
+ul li:not(:last-child) { margin-right: 0; }
+.slide-wrap {
+	width: 660px; height:240px;
+	border: 1px solid;
+	position: relative;
+	overflow: hidden;
+}
+.slide {
+	position: absolute;
+	width: 1940px; height: 240px;
+}
+#transform .slide:hover {
+	transform: translateX(-320px);
+}
+#transform .slide:active {
+	transform: translateX(-640px);
+}
+
+#transform2 .slide-wrap {
+	margin-top: 50px;
+	width: 980px;
+	position: relative;
+}
+#transform2 .slide {
+	position: absolute;
+	width: 1940px; height: 240px;
+}
+#transform2 .slide:hover {
+	transform: translateX(-320px); 
+}
+#transform2 .slide:active {
+	transform: translateX(-640px);
+}
+</style>
+</head>
+<body>
+<h3>이미지이동실습</h3>
+<div id="transform">
+	<div class="slide-wrap">
+		<div class="slide">
+			<ul>
+				<li><img src="./images/cb1.jpg"></li>
+				<li><img src="./images/cb2.jpg"></li>
+				<li><img src="./images/cb3.jpg"></li>
+				<li><img src="./images/cb4.jpg"></li>
+				<li><img src="./images/cb5.jpg"></li> 
+				<li><img src="./images/cherry-blossom.jpg"></li>
+			</ul>
+		</div>
+	</div> 
+</div>
+<div id="transform2">
+	<div class="slide-wrap">
+		<div class="slide">
+			<ul>
+				<li><img src="./images/cb1.jpg"></li>
+				<li><img src="./images/cb2.jpg"></li>
+				<li><img src="./images/cb3.jpg"></li>
+				<li><img src="./images/cb4.jpg"></li>
+				<li><img src="./images/cb5.jpg"></li> 
+				<li><img src="./images/cherry-blossom.jpg"></li>
+			</ul>
+		</div>
+	</div> 
+</div>
+</body>
+</html>
