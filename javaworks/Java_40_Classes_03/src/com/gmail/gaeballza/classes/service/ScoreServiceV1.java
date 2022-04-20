@@ -5,7 +5,7 @@ import com.gmail.gaeballza.classes.utils.Line;
 
 public class ScoreServiceV1 {
 	
-	private ScoreV2VO[] scores;
+	protected ScoreV2VO[] scores;
 	
 	public ScoreServiceV1() {
 		this(10);
@@ -47,9 +47,9 @@ public class ScoreServiceV1 {
 	
 	public void printScore() {
 		System.out.println(Line.dLine(50));
-		System.out.println("ºû³ª °í±³ ¼ºÀûÇ¥");
+		System.out.println("êµ­ì œ ê³ êµ ì„±ì í‘œ");
 		System.out.println(Line.sLine(50));
-		System.out.println("ÀÌ   ¸§\t±¹¾î\t¿µ¾î\t¼öÇĞ\tÃÑÁ¡\tÆò±Õ");
+		System.out.println("ì´    ë¦„\têµ­ì–´\tì˜ì–´\tìˆ˜í•™\tì´ì \tí‰ê· ");
 		System.out.println(Line.sLine(50));
 		
 		for (int i = 0; i < scores.length; i ++) {
@@ -88,7 +88,7 @@ public class ScoreServiceV1 {
 		float floatSumAvg = (float)intSums / (float)scores.length;
 		float fAvgSumAvg = fAvgSum / (float)scores.length;
 		
-		System.out.print("Æò   ±Õ\t");
+		System.out.print("í‰ê·  ì ìˆ˜\t");
 		System.out.print(floatKorAvg + "\t");
 		System.out.print(floatEngAvg + "\t");
 		System.out.print(floatMathAvg + "\t");
