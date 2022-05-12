@@ -1,5 +1,6 @@
 package com.gmail.gaeballza.todo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.gmail.gaeballza.todo.model.TodoVO;
@@ -10,7 +11,7 @@ import com.gmail.gaeballza.todo.service.impl.TodoServiceImplV1;
 import com.gmail.gaeballza.todo.util.Line;
 
 public class TodoControllerV12 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		TodoService toService = new TodoServiceImplV1();
 		InputService inService = new InputServiceImplV2();
 
@@ -44,10 +45,14 @@ public class TodoControllerV12 {
 					System.out.println("숫자로만 선택하세요");
 					continue;
 				}
-				if(num == -1) return;
+				if(num == -1) break;
 				toService.compTodo(num);
+				printTodo(todoList);
+				
 				}
-			}// end if
+			} else if(mainMenu == 5) {
+				toService.saveTodo(null);
+			}
 
 		} // end while
 

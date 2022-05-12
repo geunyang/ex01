@@ -13,6 +13,7 @@ import lombok.Setter;
 @Builder
 public class TodoVO {
 	
+	// id
 	private String tKey;
 	// todo
 	private String tContent;
